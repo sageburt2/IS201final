@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Name My Boppie</title>
+    <style>
+        body {
+            background-color: #fff8f0;
+            font-family: 'Arial Rounded MT Bold', sans-serif;
+            text-align: center;
+            padding: 50px;
+            color: #4b3c2a;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        .generator-box {
+            background-color: #fdebd3;
+            padding: 30px;
+            border-radius: 20px;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #f9a826;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #e88d0b;
+        }
+
+        .name {
+            font-size: 2.5em;
+            margin-top: 30px;
+            color: #b3541e;
+        }
+
+        a {
+            display: block;
+            margin-top: 40px;
+            color: #4b3c2a;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Name My Boppie</h1>
+
+    <div class="generator-box">
+        <p>Click the button to reveal your Boppie’s name!</p>
+        <button onclick="generateName()">Generate Name</button>
+        <div class="name" id="boppieName"></div>
+    </div>
+
+    <a href="scratch.html">← Back to Scratch Page</a>
+
+    <script>
+        const names = [
+            "SnuggleBug",
+            "Mochi",
+            "Fluffernugget",
+            "Toasty",
+            "Nibbles",
+            "Pebble",
+            "Sprinkle",
+            "Waffles",
+            "Boop",
+            "Pickle",
+            "Cloudie",
+            "Twinkle",
+            "Luna",
+            "Muffin",
+            "Jellybean"
+        ];
+
+        function generateName() {
+            const randomIndex = Math.floor(Math.random() * names.length);
+            document.getElementById('boppieName').textContent = names[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
